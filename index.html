@@ -22,20 +22,21 @@
         v-model='toAddTaskName' 
         @keyup.enter="addTask"
         type="text" placeholder="Inserisci un task">
-        <button @click='addTask'>INVIA</button>
+        <button @click='addTask'>INSERISCI</button>
       </div>
       <div class="listContainer">
-        <ul>
+        <ul id="lista">
           <li
           v-for="(task,index) in tasks"
-          :class="(task.done)? 'checked' : null"
+          :class="(task.done)? 'checked animation' : null"
           @click="task.done=!task.done"
           >
             
             {{task.taskName}}
             <i
             @click.stop="removeTask(index)" 
-            class="fas fa-times"></i>
+            class="fas fa-times"
+            v-if="task.done"></i>
           </li>
         </ul>
       </div>
@@ -43,7 +44,7 @@
     
 
   </div>
-  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="main.js"></script>
 </body>
 </html>

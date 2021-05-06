@@ -5,7 +5,7 @@
 }
 
 .container{
-  background-color: red;
+  background-color: lightblue;
   height: 100vh;
   width: 70%;
   margin: 0 auto;
@@ -13,33 +13,76 @@
 .logo, .inputs, .listContainer{
   text-align: center;
   padding-top: 10px;
-  background-color: green;
-  margin-bottom: 10px;
+  background-color: white;
+  padding-bottom: 10px;
+}
+input,button{
+  padding:5px 10px;
+  border-radius: 999px;
+  outline: 0;
+  border:1px solid grey;
 }
 img{
   width: 40%;
 }
 ul{
   list-style: none;
+  margin-bottom: 15px;
 }
 ul li{
   border-bottom: 1px solid black;
   width: 70%;
   margin: 0 auto;
   text-align: left;
+  padding: 10px 0;
   padding-left: 5px;
+  cursor: pointer;
 }
 ul li.checked{
   text-decoration: line-through;
+  background-color: rgba(250, 128, 114, .5);
+  
+
 }
+
+
+
+ul li.checked.animation{
+  animation-name: redaalert;
+  animation-duration: .7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes redalert{
+  from{
+    background-color: rgba(250, 128, 114, .5);
+  }
+  to{
+    background-color: rgba(250, 128, 114, 1);
+  }
+
+};
+
 ul li:last-child{
   border-bottom: none;
 }
 .listContainer{
   width: 80%;
   margin: 0 auto;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  margin-top: 50PX;
 }
 i{
   float: right;
-  padding-right: 5px;
+  padding-right: 0px;
+  transition: transform .5s;
+  margin-right: 5px;
+  
+  
+}
+i:hover{
+  transform:rotate(180deg);
+  transform-origin: center;
 }
