@@ -12,11 +12,11 @@ const app = new Vue({
       },
       {
         taskName: 'Mangiare',
-        done:false,
+        done:true,
       },
       {
         taskName: 'Lavarsi i denti',
-        done:true,
+        done:false,
       },
       {
         taskName: 'Studiare',
@@ -51,14 +51,13 @@ const app = new Vue({
       }
       
     },
+    addCompleted(index){
+      this.tasks[index].done=!this.tasks[index].done
+      console.log('ticked');
+      
+    },
+
   },
 
 
-})
-$(function(){
-  
-  $('#clear').click(function(){
-    $('.checked').remove()
-  })
-  
 })
