@@ -50,10 +50,15 @@ const app = new Vue({
         
       }
       
-      
-      
-    }
+    },
   },
 
 
+})
+$(function(){
+  
+  $('#clear').click(function(){
+    $('.checked').remove()
+  })
+  
 })

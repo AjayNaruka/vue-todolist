@@ -48,7 +48,7 @@ ul li.checked{
 
 
 ul li.checked.animation{
-  animation-name: redaalert;
+  animation-name: redalert;
   animation-duration: .7s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -86,3 +86,4 @@ i:hover{
   transform:rotate(180deg);
   transform-origin: center;
 }
+
